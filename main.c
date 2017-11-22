@@ -7,6 +7,9 @@
 
 int main(void)
 {
+	initPins();
+	initTim();
+	initPWM();
 
     while(1)
     {

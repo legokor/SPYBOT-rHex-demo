@@ -27,3 +27,31 @@ void initPins(void) {
 	GPIO_Init(GPIOD, &initStruct);
 
 }
+
+void initTim(void) {
+	/*
+	 * mi lenne ha az initStruct-ot pointerkent kapna a fuggveny parameterben
+	 * igy a strukturat lehetne globalis valtozoban tartani
+	 * es lehetne PWM/kitoltesi tenyezo allito fuggvenyeket is irni
+	 */
+
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM4, ENABLE);
+
+	TIM_TimeBaseInitTypeDef initStruct;
+	initStruct.TIM_ClockDivision = TIM_CKD_DIV1;
+	initStruct.TIM_CounterMode = TIM_CounterMode_Up;
+	initStruct.TIM_Period = 336 - 1;
+	initStruct.TIM_Prescaler = 1000 - 1; // tim_tick = 16 800 Hz
+	initStruct.TIM_RepetitionCounter = 0;
+
+	TIM_TimeBaseInit(TIM3, &initStruct);
+	TIM_TimeBaseInit(TIM4, &initStruct);
+	TIM_Cmd(TIM3, ENABLE);
+	TIM_Cmd(TIM4, ENABLE);
+}
+
+
+
+
+

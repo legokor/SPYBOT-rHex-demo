@@ -7,10 +7,11 @@
 
 
 void initPins(void) {
+
+	// ------------------------------------ Output pins for motor PWM ------------------------------------
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 
-	// TIM3_CH1 -> PC6
 	GPIO_PinAFConfig(GPIOC, GPIO_PinSource6, GPIO_AF_TIM3);
 	GPIO_PinAFConfig(GPIOC, GPIO_PinSource7, GPIO_AF_TIM3);
 	GPIO_PinAFConfig(GPIOC, GPIO_PinSource8, GPIO_AF_TIM3);
@@ -24,11 +25,25 @@ void initPins(void) {
 	initStruct.GPIO_OType = GPIO_OType_PP;
 	initStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	initStruct.GPIO_Speed = GPIO_Speed_100MHz;
+
+	// TIM3
+	initStruct.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8;
+	GPIO_Init(GPIOC, &initStruct);
+
+	// TIM4
 	initStruct.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14;
 	GPIO_Init(GPIOD, &initStruct);
 
-	initStruct.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8;
-	GPIO_Init(GPIOC, &initStruct);
+	// ------------------------------------ input pin for Button(s)------------------------------------
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+
+	initStruct.GPIO_Mode = GPIO_Mode_IN;
+	initStruct.GPIO_OType = GPIO_OType_PP;
+	initStruct.GPIO_PuPd = GPIO_PuPd_DOWN;
+	initStruct.GPIO_Speed = GPIO_Speed_100MHz;
+	initStruct.GPIO_Pin = GPIO_Pin_0;
+	GPIO_Init(GPIOA, &initStruct);
+
 }
 
 void initTim(void) {
@@ -61,7 +76,6 @@ void initPWM(void) {
 
 	// periodus = 336 - 1
 	// 50% = 168 - 1
-
 	initStruct.TIM_Pulse = 168 - 1;
 
 	// init all channel to 50% PWM

@@ -8,24 +8,27 @@
 
 void initPins(void) {
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
 
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource10, GPIO_AF_TIM3);
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource11, GPIO_AF_TIM3);
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM3);
+	// TIM3_CH1 -> PC6
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource6, GPIO_AF_TIM3);
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource7, GPIO_AF_TIM3);
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource8, GPIO_AF_TIM3);
 
+	GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM4);
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource13, GPIO_AF_TIM4);
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource14, GPIO_AF_TIM4);
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource15, GPIO_AF_TIM4);
 
 	GPIO_InitTypeDef initStruct;
-	initStruct.GPIO_Mode = GPIO_Mode_OUT;
+	initStruct.GPIO_Mode = GPIO_Mode_AF;
 	initStruct.GPIO_OType = GPIO_OType_PP;
 	initStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	initStruct.GPIO_Speed = GPIO_Speed_100MHz;
-	initStruct.GPIO_Pin =
-			GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+	initStruct.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14;
 	GPIO_Init(GPIOD, &initStruct);
 
+	initStruct.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8;
+	GPIO_Init(GPIOC, &initStruct);
 }
 
 void initTim(void) {

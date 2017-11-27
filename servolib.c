@@ -63,7 +63,7 @@ void initTim(void) {
 	TIM_Cmd(TIM4, ENABLE);
 }
 
-void initPWM(void) {
+void initPWM(int fill) {
 	/*
 	 * mi lenne ha az initStruct-ot pointerkent kapna a fuggveny parameterben
 	 * igy a strukturat lehetne globalis valtozoban tartani
@@ -76,10 +76,11 @@ void initPWM(void) {
 
 	// periodus = 336 - 1
 	// 50% = 168 - 1
-	initStruct.TIM_Pulse = 168 - 1;
+	//initStruct.TIM_Pulse = 168 - 1;
+	initStruct.TIM_Pulse = (336/100)*fill - 1;
 
 	// init all channel to 50% PWM
-	// ----------------- TIM3 ------------------------
+	// ------------------------------------ TIM3 ------------------------------------
 	TIM_OC1Init(TIM3, &initStruct);
 	TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
 
@@ -89,7 +90,7 @@ void initPWM(void) {
 	TIM_OC3Init(TIM3, &initStruct);
 	TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Enable);
 
-	// ----------------- TIM4 ------------------------
+	// ------------------------------------ TIM4 ------------------------------------
 	TIM_OC1Init(TIM4, &initStruct);
 	TIM_OC1PreloadConfig(TIM4, TIM_OCPreload_Enable);
 
@@ -98,8 +99,6 @@ void initPWM(void) {
 
 	TIM_OC3Init(TIM4, &initStruct);
 	TIM_OC3PreloadConfig(TIM4, TIM_OCPreload_Enable);
-
-
 }
 
 

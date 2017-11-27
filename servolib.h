@@ -6,6 +6,6 @@ void initPins(void);
 
 void initTim(void);
 
-void initPWM(void);
+void initPWM(int fill);
 
 #endif //SERVOLIB

@@ -53,8 +53,8 @@ void initTim(void) {
 	TIM_TimeBaseInitTypeDef initStruct;
 	initStruct.TIM_ClockDivision = TIM_CKD_DIV1;
 	initStruct.TIM_CounterMode = TIM_CounterMode_Up;
-	initStruct.TIM_Period = 336 - 1;
-	initStruct.TIM_Prescaler = 1000 - 1; // tim_tick = 16 800 Hz
+	initStruct.TIM_Prescaler = 100 - 1; 	// tim_tick = 168 000 Hz
+	initStruct.TIM_Period = 3360- 1; 		// 50 Hz PWM <=> 20 000 us pulse window
 	initStruct.TIM_RepetitionCounter = 0;
 
 	TIM_TimeBaseInit(TIM3, &initStruct);
@@ -74,10 +74,11 @@ void initPWM(int fill) {
 	initStruct.TIM_OutputState = TIM_OutputState_Enable;
 	initStruct.TIM_OCPolarity = TIM_OCPolarity_Low;
 
-	// periodus = 336 - 1
-	// 50% = 168 - 1
-	//initStruct.TIM_Pulse = 168 - 1;
-	initStruct.TIM_Pulse = (336/100)*fill - 1;
+	// periodus = 3360 - 1
+	//   0% = 84 - 1
+	// 100% = 420 - 1
+	// fill goes 0-100
+	initStruct.TIM_Pulse = 84 + (fill/100)*336  - 1;
 
 	// init all channel to 50% PWM
 	// ------------------------------------ TIM3 ------------------------------------

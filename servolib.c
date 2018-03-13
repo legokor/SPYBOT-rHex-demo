@@ -7,8 +7,17 @@
 
 
 void initPins(void) {
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 
+	// ------------------------------------ Output pins for motor PWM ------------------------------------
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOC, ENABLE);
+
+<<<<<<< HEAD
+=======
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource6, GPIO_AF_TIM3);
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource7, GPIO_AF_TIM3);
+	GPIO_PinAFConfig(GPIOC, GPIO_PinSource8, GPIO_AF_TIM3);
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM4);
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource13, GPIO_AF_TIM4);
@@ -19,9 +28,24 @@ void initPins(void) {
 	initStruct.GPIO_OType = GPIO_OType_PP;
 	initStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	initStruct.GPIO_Speed = GPIO_Speed_100MHz;
-	initStruct.GPIO_Pin =
-			GPIO_Pin_10 | GPIO_Pin_11 | GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15;
+
+	// TIM3
+	initStruct.GPIO_Pin = GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8;
+	GPIO_Init(GPIOC, &initStruct);
+
+	// TIM4
+	initStruct.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14;
 	GPIO_Init(GPIOD, &initStruct);
+
+	// ------------------------------------ input pin for Button(s)------------------------------------
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+
+	initStruct.GPIO_Mode = GPIO_Mode_IN;
+	initStruct.GPIO_OType = GPIO_OType_PP;
+	initStruct.GPIO_PuPd = GPIO_PuPd_DOWN;
+	initStruct.GPIO_Speed = GPIO_Speed_100MHz;
+	initStruct.GPIO_Pin = GPIO_Pin_0;
+	GPIO_Init(GPIOA, &initStruct);
 
 }
 
@@ -32,8 +56,8 @@ void initTim(void) {
 	TIM_TimeBaseInitTypeDef initStruct;
 	initStruct.TIM_ClockDivision = TIM_CKD_DIV1;
 	initStruct.TIM_CounterMode = TIM_CounterMode_Up;
-	initStruct.TIM_Period = 336 - 1;
-	initStruct.TIM_Prescaler = 1000 - 1; // tim_tick = 16 800 Hz
+	initStruct.TIM_Prescaler = 100 - 1; 	// tim_tick = 168 000 Hz
+	initStruct.TIM_Period = 3360- 1; 		// 50 Hz PWM <=> 20 000 us pulse window
 	initStruct.TIM_RepetitionCounter = 0;
 
 	TIM_TimeBaseInit(TIM3, &initStruct);
@@ -42,7 +66,7 @@ void initTim(void) {
 	TIM_Cmd(TIM4, ENABLE);
 }
 
-void initPWM(void) {
+void initPWM(int fill) {
 	/*
 	 * mi lenne ha az initStruct-ot pointerkent kapna a fuggveny parameterben
 	 * igy a strukturat lehetne globalis valtozoban tartani
@@ -53,6 +77,7 @@ void initPWM(void) {
 	initStruct.TIM_OutputState = TIM_OutputState_Enable;
 	initStruct.TIM_OCPolarity = TIM_OCPolarity_Low;
 
+<<<<<<< HEAD
 	// periodus = 336 - 1
 	// 50% = 168 - 1
 	// 170 - 1 -re gyorsan forog óramutató szembe
@@ -60,9 +85,16 @@ void initPWM(void) {
 	//
 
 	initStruct.TIM_Pulse = 175 - 1;
+=======
+	// periodus = 3360 - 1
+	//   0% = 84 - 1
+	// 100% = 420 - 1
+	// fill goes 0-100
+	initStruct.TIM_Pulse = 84 + (fill/100)*336  - 1;
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 
 	// init all channel to 50% PWM
-	// ----------------- TIM3 ------------------------
+	// ------------------------------------ TIM3 ------------------------------------
 	TIM_OC1Init(TIM3, &initStruct);
 	TIM_OC1PreloadConfig(TIM3, TIM_OCPreload_Enable);
 
@@ -72,7 +104,7 @@ void initPWM(void) {
 	TIM_OC3Init(TIM3, &initStruct);
 	TIM_OC3PreloadConfig(TIM3, TIM_OCPreload_Enable);
 
-	// ----------------- TIM4 ------------------------
+	// ------------------------------------ TIM4 ------------------------------------
 	TIM_OC1Init(TIM4, &initStruct);
 	TIM_OC1PreloadConfig(TIM4, TIM_OCPreload_Enable);
 
@@ -81,8 +113,6 @@ void initPWM(void) {
 
 	TIM_OC3Init(TIM4, &initStruct);
 	TIM_OC3PreloadConfig(TIM4, TIM_OCPreload_Enable);
-
-
 }
 
 

@@ -11,23 +11,27 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="2"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/main.c" title="main.c" tooltip="C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rHex demo/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="108" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="170" selectionTopPixel="0"/>
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="servolib.c" partName="servolib.c" path="C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/servolib.c" title="servolib.c" tooltip="C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/servolib.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rHex demo/servolib.c"/>
+<<<<<<< HEAD
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1857" selectionTopPixel="638"/>
+=======
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2100" selectionTopPixel="933"/>
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="servolib.h" partName="servolib.h" path="C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/servolib.h" title="servolib.h" tooltip="C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/servolib.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/rHex demo/servolib.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="106" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="136" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -42,7 +46,11 @@
 <element path="/rHex demo/cmsis_lib/include"/>
 </expanded>
 <selection>
+<<<<<<< HEAD
 <element path="/rHex demo/servolib.c"/>
+=======
+<element path="/rHex demo/servolib.h"/>
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 </selection>
 </viewState>
 </view>
@@ -126,9 +134,15 @@
 </presentation>
 </folder>
 </info>
+<<<<<<< HEAD
 <info part="org.coocox.builder.ui.exampleView" ratio="0.19261992" ratioLeft="261" ratioRight="1094" relationship="2" relative="org.eclipse.ui.internal.ViewStack@d622c3"/>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1d737ba" ratio="0.69635195" ratioLeft="649" ratioRight="283" relationship="2" relative="org.coocox.builder.ui.exampleView">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+=======
+<info part="org.coocox.builder.ui.exampleView" ratio="0.21966527" ratioLeft="420" ratioRight="1492" relationship="2" relative="org.eclipse.ui.internal.ViewStack@d622c3"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1d737ba" ratio="0.8555858" ratioLeft="628" ratioRight="106" relationship="2" relative="org.coocox.builder.ui.exampleView">
+<folder activePageID="org.coocox.component.ui.Help" appearance="2" expanded="2">
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 <page content="org.coocox.component.ui.Help" label="Help"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
@@ -245,9 +259,14 @@
 <workingSets/>
 <navigationHistory>
 <editors>
+<<<<<<< HEAD
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rHex demo/main.c"/>
+=======
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rHex demo/servolib.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rHex demo/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rHex demo/servolib.h"/>
+<<<<<<< HEAD
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rHex demo/cmsis_boot/stm32f4xx.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rHex demo/cmsis_boot/system_stm32f4xx.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/rHex demo/main.c"/>
@@ -398,6 +417,158 @@
 </item>
 <item historyLabel="main.c" index="5">
 <position info="not_deleted" x="108" y="0"/>
+=======
+</editors>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="108" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="108" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="528" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2630" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="528" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="167" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="136" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="136" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="2641" y="0"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="136" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3379" y="0"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="136" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3375" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3370" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3370" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3377" y="21"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="136" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3399" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3900" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3900" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3900" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3900" y="0"/>
+</item>
+<item historyLabel="servolib.h" index="2">
+<position info="not_deleted" x="136" y="0"/>
+</item>
+<item historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3900" y="0"/>
+</item>
+<item historyLabel="main.c" index="1">
+<position info="not_deleted" x="170" y="0"/>
+</item>
+<item active="true" historyLabel="servolib.c" index="0">
+<position info="not_deleted" x="3900" y="0"/>
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 </item>
 <item active="true" historyLabel="servolib.c" index="1">
 <position info="not_deleted" x="467" y="0"/>
@@ -409,11 +580,25 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="CubeMX_test_CoIDE/Src/main.c">
 <persistable path="/CubeMX_test_CoIDE/Src/main.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="CubeMX_test_CoIDE/Src/stm32f4xx_it.c">
 <persistable path="/CubeMX_test_CoIDE/Src/stm32f4xx_it.c"/>
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="servolib.h" tooltip="rHex demo/servolib.h">
+<persistable path="/rHex demo/servolib.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="rHex demo/cmsis_boot/stm32f4xx.h">
+<persistable path="/rHex demo/cmsis_boot/stm32f4xx.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="system_stm32f4xx.c" tooltip="rHex demo/cmsis_boot/system_stm32f4xx.c">
+<persistable path="/rHex demo/cmsis_boot/system_stm32f4xx.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="servolib.c" tooltip="rHex demo/servolib.c">
+<persistable path="/rHex demo/servolib.c"/>
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="enyem.c" tooltip="CubeMX_test_CoIDE/Src/enyem.c">
 <persistable path="/CubeMX_test_CoIDE/Src/enyem.c"/>
@@ -421,6 +606,7 @@
 <file factoryID="org.coocox.component.board.ui.editor.BoardEditorElementFactory" id="org.coocox.component.board.ui.editor.BoardBrowserEditor" name="Board" tooltip="Board">
 <persistable>&#x0A;<subPage/>
 </persistable>
+<<<<<<< HEAD
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="rHex demo.coproj" tooltip="C:\Users\bmare\Documents\GitHub\SPYBOT-rHex-demo\rHex demo.coproj">
 <persistable uri="file:/C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/rHex%20demo.coproj"/>
@@ -430,6 +616,8 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.h" tooltip="1_workshop/cmsis_lib/include/stm32f4xx_gpio.h">
 <persistable path="/1_workshop/cmsis_lib/include/stm32f4xx_gpio.h"/>
+=======
+>>>>>>> ce7ae31ccb27ae85b0241ea30c484d99ddfd6e20
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_gpio.c" tooltip="1_workshop/cmsis_lib/source/stm32f4xx_gpio.c">
 <persistable path="/1_workshop/cmsis_lib/source/stm32f4xx_gpio.c"/>
@@ -451,6 +639,9 @@
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="rHex demo.coproj" tooltip="C:\Users\bmare\Documents\GitHub\SPYBOT-rHex-demo\rHex demo.coproj">
 <persistable uri="file:/C:/Users/bmare/Documents/GitHub/SPYBOT-rHex-demo/rHex%20demo.coproj"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OsConfig.h" tooltip="cocoox OS/CoOS/OsConfig.h">
+<persistable path="/cocoox OS/CoOS/OsConfig.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OsConfig.h" tooltip="cocoox OS/CoOS/OsConfig.h">
 <persistable path="/cocoox OS/CoOS/OsConfig.h"/>

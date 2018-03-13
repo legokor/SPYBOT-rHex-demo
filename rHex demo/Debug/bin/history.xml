@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="5.4.1 -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=rHex demo.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\rHex demo -TC:\CooCox\CoIDE\configuration\ProgramData\rHex demo/arm-gcc-link.ld -g">
+      <target file="rHex demo.elf" lastModified="16021a42b8c">
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="16021a425b0"/>
+         <source file="..\obj\main.o" lastModified="16021a425fe"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="16021a4268b"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="16021a42717"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="16021a427a4"/>
+         <source file="..\obj\servolib.o" lastModified="16021a42821"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="16021a4292b"/>
+      </target>
+   </processor>
+</history>

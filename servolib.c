@@ -9,16 +9,13 @@
 void initPins(void) {
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE);
 
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource10, GPIO_AF_TIM3);
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource11, GPIO_AF_TIM3);
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM3);
 
+	GPIO_PinAFConfig(GPIOD, GPIO_PinSource12, GPIO_AF_TIM4);
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource13, GPIO_AF_TIM4);
 	GPIO_PinAFConfig(GPIOD, GPIO_PinSource14, GPIO_AF_TIM4);
-	GPIO_PinAFConfig(GPIOD, GPIO_PinSource15, GPIO_AF_TIM4);
 
 	GPIO_InitTypeDef initStruct;
-	initStruct.GPIO_Mode = GPIO_Mode_OUT;
+	initStruct.GPIO_Mode = GPIO_Mode_AF;
 	initStruct.GPIO_OType = GPIO_OType_PP;
 	initStruct.GPIO_PuPd = GPIO_PuPd_NOPULL;
 	initStruct.GPIO_Speed = GPIO_Speed_100MHz;
@@ -58,8 +55,11 @@ void initPWM(void) {
 
 	// periodus = 336 - 1
 	// 50% = 168 - 1
+	// 170 - 1 -re gyorsan forog óramutató szembe
+	// 175 - 1 -re megáll
+	//
 
-	initStruct.TIM_Pulse = 168 - 1;
+	initStruct.TIM_Pulse = 175 - 1;
 
 	// init all channel to 50% PWM
 	// ----------------- TIM3 ------------------------
